@@ -1,0 +1,417 @@
+```css
+/* Basic Design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0b16;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    color: #00e5ff;
+    margin: 20px;
+    font-size: 36px;
+}
+
+h2 {
+    color: orange;
+    margin: 25px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 15px;
+}
+
+/* Profile Image */
+
+img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #00e5ff;
+    object-fit: cover;
+}
+
+/* Skills */
+
+.skill {
+    display: inline-block;
+    background: #008cff;
+    padding: 12px 25px;
+    margin: 8px;
+    border-radius: 25px;
+}
+
+.skills span {
+    box-shadow: 0 0 10px cyan;
+    transition: 0.4s;
+}
+
+.skills span:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 25px cyan;
+    transform: translateY(-8px) scale(1.1);
+}
+
+/* General Button */
+
+button {
+    background: #00e5ff;
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: orange;
+    transform: scale(1.05);
+}
+
+/* Social Media Design */
+
+#social {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#social a:nth-of-type(1) {
+    background: #1877F2;
+}
+
+#social a:nth-of-type(2) {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+#social a:nth-of-type(3) {
+    background: #24292f;
+}
+
+/* Contact Me Design */
+
+#contact {
+    padding: 5px 20px;
+    margin-top: 0;
+}
+
+.email-btn {
+    background: #4285F4;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+}
+
+/* All Five Buttons Same Small Size */
+
+#social a,
+.email-btn,
+.whatsapp-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 50px;
+    padding: 0;
+    margin: 12px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+
+#social a:hover,
+.email-btn:hover,
+.whatsapp-btn:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 20px cyan;
+}
+
+/* Projects Design */
+
+#projects {
+    padding: 15px 20px;
+    margin-bottom: 0;
+}
+
+.project-card {
+    display: inline-block;
+    width: 280px;
+    background: #101b30;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 15px;
+    border: 1px solid #00e5ff;
+    box-shadow: 0 0 12px #008cff;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 0 30px cyan;
+    border-color: white;
+}
+
+.project-card h3 {
+    color: #00ffff;
+    margin-bottom: 15px;
+}
+
+/* Light Mode */
+
+body.light-mode {
+    background: #f0f4ff;
+    color: #111;
+}
+
+body.light-mode header,
+body.light-mode footer,
+body.light-mode .project-card {
+    background: white;
+    color: black;
+}
+
+body.light-mode h1 {
+    color: #0077cc;
+}
+
+body.light-mode h2 {
+    color: #e67e22;
+}
+
+/* Navbar Design */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    margin: 20px auto;
+    background: #101b30;
+    border: 1px solid cyan;
+    border-radius: 50px;
+    max-width: 900px;
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 15px cyan;
+    transform: translateY(-4px);
+}
+
+/* Typing Animation */
+
+.typing-text {
+    font-size: 24px;
+    color: cyan;
+    font-weight: bold;
+}
+
+#typing {
+    border-right: 3px solid cyan;
+    padding-right: 5px;
+}
+
+/* Scroll Reveal Animation */
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 12px;
+        border-radius: 20px;
+    }
+
+    .navbar a {
+        padding: 10px 14px;
+        font-size: 14px;
+        flex: 1 1 100px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #social a,
+    .email-btn,
+    .whatsapp-btn {
+        width: 160px;
+        height: 50px;
+        margin: 10px;
+    }
+}
+
+/* Professional Footer */
+
+.footer {
+    background: #101b30;
+    padding: 30px 15px;
+    margin-top: 50px;
+    border-top: 2px solid cyan;
+    box-shadow: 0 0 15px cyan;
+}
+
+.footer h3 {
+    color: cyan;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* View Project Button */
+
+.view-btn {
+    display: inline-block;
+    background: cyan;
+    color: black;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: orange;
+    transform: scale(1.08);
+    box-shadow: 0 0 15px cyan;
+}
+
+/* Profile Photo Glow Animation */
+
+.profile {
+    box-shadow: 0 0 15px cyan;
+    transition: 0.4s;
+}
+
+.profile:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px cyan;
+}
+
+/* Loading Screen */
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #080d1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #333;
+    border-top: 5px solid cyan;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* CV Section */
+
+#cv {
+    padding: 30px 20px;
+    margin: 20px 0;
+}
+
+.cv-button {
+    display: inline-block;
+    background: #00e5ff;
+    color: black;
+    padding: 14px 25px;
+    margin: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cv-button:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00e5ff;
+}
